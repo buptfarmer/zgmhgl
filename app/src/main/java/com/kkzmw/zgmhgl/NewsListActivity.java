@@ -27,7 +27,9 @@ import com.zhy.bean.NewsItem;
 import com.zhy.biz.Items4399Biz;
 import com.zhy.csdn.Constaint;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.kkzmw.zgmhgl.dao.NewsItemDao;
@@ -115,6 +117,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d(TAG,"onResume: isFirstIn:"+isFirstIn);
         if (isFirstIn) {
             /**
              * 进来时直接刷新
@@ -179,8 +182,6 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             switch (result) {
                 case TIP_ERROR_NO_NETWORK:
                     ToastUtil.toast(NewsListActivity.this, "没有网络连接！");
-                    mAdapter.setDatas(mDatas);
-                    mAdapter.notifyDataSetChanged();
                     break;
                 case TIP_ERROR_SERVER:
                     ToastUtil.toast(NewsListActivity.this, "服务器错误！");
@@ -194,6 +195,9 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             mXListView.setRefreshTime(AppUtil.getRefreashTime(NewsListActivity.this, mNewsType));
             mXListView.stopRefresh();
             mXListView.stopLoadMore();
+
+            mAdapter.setDatas(mDatas);
+            mAdapter.notifyDataSetChanged();
 //            mAdapter.addAll(mDatas);
 //            mAdapter.notifyDataSetChanged();
 //            mXListView.stopRefresh();
@@ -212,8 +216,8 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             // 获取最新数据
             try {
                 List<NewsItem> newsItems = getNewsItems(mNewsType, mCurrentPage);
-                mAdapter.setDatas(newsItems);
-
+//                mAdapter.setDatas(newsItems);
+                mDatas.addAll(newsItems);
                 isLoadingDataFromNetWork = true;
                 // 设置刷新时间
                 AppUtil.setRefreashTime(NewsListActivity.this, mNewsType);
@@ -233,7 +237,6 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             // TODO从数据库中加载
             List<NewsItem> newsItems = mNewsItemDao.list(mNewsType, mCurrentPage);
             mDatas = newsItems;
-            //mAdapter.setDatas(newsItems);
             return TIP_ERROR_NO_NETWORK;
         }
 
@@ -263,6 +266,8 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
 
                 if (DEBUG) {
                     Log.d(TAG, "json: title:" + title + "  imgLink:" + imgLink + "  publicTime:" + publicTime + "  breifContent:" + breifContent);
+                    Log.d(TAG, "publicTime"+new SimpleDateFormat("yyyy-MM-dd").format(new Date(publicTime))  +" ,currentTime"+System.currentTimeMillis());
+
                 }
                 newsItem = new NewsItem();
                 newsItem.setTitle(title);
@@ -291,8 +296,8 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             try {
                 List<NewsItem> newsItems = getNewsItems(mNewsType, mCurrentPage);
                 mNewsItemDao.add(newsItems);
-                mAdapter.addAll(newsItems);
-                mAdapter.notifyDataSetChanged();
+                mDatas.addAll(newsItems);
+//                mAdapter.addAll(newsItems);
             } catch (CommonException e) {
                 e.printStackTrace();
             }
@@ -300,8 +305,9 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             // 从数据库加载的
             mCurrentPage += 1;
             List<NewsItem> newsItems = mNewsItemDao.list(mNewsType, mCurrentPage);
-            mAdapter.addAll(newsItems);
-            mAdapter.notifyDataSetChanged();
+            mDatas.addAll(newsItems);
+
+//            mAdapter.addAll(newsItems);
 
         }
 
@@ -310,7 +316,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
     public static class NewsItemAdapter extends BaseAdapter {
 
         private LayoutInflater mInflater;
-        private List<NewsItem> mDatas;
+        private List<NewsItem> mDatas = new ArrayList<NewsItem>();
 
         /**
          * 使用了github开源的ImageLoad进行了数据加载
@@ -319,7 +325,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
         private DisplayImageOptions options;
 
         public NewsItemAdapter(Context context, List<NewsItem> datas) {
-            this.mDatas = datas;
+            this.mDatas.addAll(datas);
             mInflater = LayoutInflater.from(context);
 
             imageLoader.init(ImageLoaderConfiguration.createDefault(context));
