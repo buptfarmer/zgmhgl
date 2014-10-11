@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpUsage" >
+
+    <style name="MyWidget" parent="@android:style/Theme" />
+
+
+    <style name="MyWidget.PageBottomButtonLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_page_bottom_button_height</item>
+        <item name="android:background">@color/common_white</item>
+    </style>
+
+
+    <style name="MyWidget.Divider">
+        <item name="android:background">@color/common_divider_color</item>
+    </style>
+
+    <style name="MyWidget.Divider.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_divider_line_size</item>
+    </style>
+
+    <style name="MyWidget.Divider.Horizontal.WithMargin">
+        <item name="android:layout_marginLeft">@dimen/common_divider_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/common_divider_horizontal_margin</item>
+    </style>
+
+    <style name="MyWidget.Divider.Vertical">
+        <item name="android:layout_width">@dimen/common_divider_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+
+    <style name="MyWidget.ListHeaderText">
+        <item name="android:textSize">@dimen/common_text_size_middle_2</item>
+        <item name="android:textColor">@color/common_dark</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="MyWidget.ListViewItemAppIcon">
+        <item name="android:layout_width">@dimen/common_list_item_app_icon_size</item>
+        <item name="android:layout_height">@dimen/common_list_item_app_icon_size</item>
+        <item name="android:layout_marginRight">@dimen/common_list_item_app_icon_right_margin</item>
+    </style>
+
+    <style name="MyWidget.ListViewItemTextTop">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/common_list_item_two_line_first_top_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/common_text_size_middle</item>
+        <item name="android:textColor">@color/common_dark</item>
+    </style>
+
+    <style name="MyWidget.ListViewItemTextCenter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/common_text_size_middle</item>
+        <item name="android:textColor">@color/common_dark</item>
+    </style>
+
+    <style name="MyWidget.ListViewItemTextBottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/common_list_item_two_line_second_top_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/common_text_size_small</item>
+        <item name="android:textColor">@color/common_grey</item>
+    </style>
+
+
+    <style name="MyWidget.ListActionStatus">
+        <item name="android:layout_width">@dimen/common_action_button_width</item>
+        <item name="android:layout_height">@dimen/common_action_button_height</item>
+        <item name="android:textColor">@color/common_green</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!-- Common dialog styles -->
+    <style name="MyWidget.CommonDialogListText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/common_text_size_middle</item>
+        <item name="android:textColor">@color/common_dark</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyWidget.CommonDialogListText.Multiline">
+        <item name="android:singleLine">false</item>
+    </style>
+
+
+    <!-- Common notification styles -->
+    <style name="MyWidget.Notification">
+        <!-- notification styles -->
+    </style>
+
+    <style name="MyWidget.Notification.BodyCompat">
+        <item name="android:background">@color/common_white</item>
+    </style>
+
+    <style name="MyWidget.Notification.Body" parent="MyWidget.Notification.BodyCompat">
+        <!-- nothing special current -->
+    </style>
+
+    <style name="MyWidget.Notification.AreaCompat">
+        <!-- no need to set background for Android 2.3 and old versions -->
+    </style>
+
+    <style name="MyWidget.Notification.Area" parent="MyWidget.Notification.AreaCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/common_notification_margin_horizontal</item>
+        <item name="android:paddingTop">@dimen/common_notification_margin_horizontal</item>
+        <item name="android:paddingRight">@dimen/common_notification_margin_horizontal</item>
+    </style>
+
+    <style name="MyWidget.Notification.LeftArea" parent="MyWidget.Notification.AreaCompat">
+        <item name="android:layout_width">@dimen/common_notification_left_icon_size</item>
+        <item name="android:layout_height">@dimen/common_notification_left_icon_size</item>
+    </style>
+
+    <style name="MyWidget.Notification.LeftArea.Icon" parent="MyWidget.Notification.AreaCompat">
+        <item name="android:layout_width">@dimen/common_notification_left_icon_size</item>
+        <item name="android:layout_height">@dimen/common_notification_left_icon_size</item>
+        <item name="android:padding">@dimen/common_notification_margin_horizontal</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/icon</item>
+    </style>
+
+    <style name="MyWidget.Notification.LeftIcon">
+        <item name="android:layout_width">@dimen/common_app_icon_size</item>
+        <item name="android:layout_height">@dimen/common_app_icon_size</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/icon</item>
+    </style>
+
+    <style name="MyWidget.Notification.DividerCompat">
+        <item name="android:background">@color/common_divider_color</item>
+    </style>
+
+    <style name="MyWidget.Notification.Divider" parent="MyWidget.Notification.DividerCompat">
+        <item name="android:layout_width">@dimen/common_divider_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/common_notification_margin_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/common_notification_margin_horizontal</item>
+    </style>
+
+    <style name="MyWidget.Notification.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyWidget.Notification.Text.TopCompat">
+        <item name="android:textColor">@color/common_dark</item>
+    </style>
+
+    <style name="MyWidget.Notification.Text.Top" parent="MyWidget.Notification.Text.TopCompat">
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="MyWidget.Notification.Text.BottomCompat">
+        <item name="android:textColor">@color/common_grey</item>
+    </style>
+
+    <style name="MyWidget.Notification.Text.Bottom" parent="MyWidget.Notification.Text.BottomCompat">
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="MyWidget.SeekbarTitleName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/common_dark</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="MyWidget.SeekbarTitleSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/common_grey</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+
+    <style name="MyWidget.HeaderTextViewShadow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowColor">#29000000</item>
+        <item name="android:shadowDy">8</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowRadius">6</item>
+        <item name="android:textColor">@color/common_white</item>
+    </style>
+
+    <style name="MyWidget.TextTips">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/common_tips_text_height</item>
+        <item name="android:minWidth">@dimen/common_tips_text_height</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="MyWidget.DxPageTipsText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#a07100</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="MyWidget.DxPageTipsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#f6eda4</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>

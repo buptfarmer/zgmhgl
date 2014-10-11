@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_half_transparent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zg_banner" />
+
+    <CheckBox
+        android:id="@+id/push_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/push_service_switch"
+        android:textColor="@color/common_white"
+        android:textSize="20sp"
+        />
+
+    <CheckBox
+        android:id="@+id/pop_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/pop_up_monitor"
+        android:textColor="@color/common_white"
+        android:textSize="20sp"
+        />
+
+
+    <Button
+        android:id="@+id/action_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/common_white"
+        android:textSize="20sp"
+        android:text="@string/action_feedback"/>
+</LinearLayout>

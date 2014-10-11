@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="common_white">#ffffff</color>
+    <color name="common_white_alpha_90">#e5ffffff</color>
+    <color name="common_white_alpha_80">#ccffffff</color>
+    <color name="common_white_alpha_70">#b3ffffff</color>
+    <color name="common_white_alpha_60">#99ffffff</color>
+    <color name="common_white_alpha_50">#7fffffff</color>
+    <color name="common_white_alpha_40">#66ffffff</color>
+    <color name="common_white_alpha_00">#00ffffff</color>
+    <color name="common_white_disabled">#e7e7e7</color>
+    <color name="common_white_bkg_normal">#e0ebf1</color>
+    <color name="common_white_bkg_pressed">#d1e7f2</color>
+    <color name="common_white_bkg_disabled">#4ce0ebf1</color>
+    <!-- For main texts (#a) -->
+    <color name="common_dark">#3d5562</color>
+    <color name="common_dark_disabled">#9aa7af</color>
+    <!-- For secondary texts (#a1) -->
+    <color name="common_grey">#8496a0</color>
+    <color name="common_grey_disabled">#aabbc4</color>
+    <color name="common_dark_grey">#6d838f</color>
+    <!-- For danger cases, such as virus, file delete (#r)... -->
+    <color name="common_red">#e13364</color>
+    <color name="common_red_bkg_pressed">#80e13364</color>
+    <color name="common_red_bkg_disabled">#4ce13364</color>
+    <!-- For warning cases, such as trashes.(#y). -->
+    <color name="common_yellow">#f7ad08</color>
+    <!-- For safe cases (#g) -->
+    <color name="common_green">#77c40a</color>
+    <color name="common_green_bkg_pressed">#8077c40a</color>
+    <color name="common_green_bkg_disabled">#4c77c40a</color>
+    <color name="common_green_progress_bg">#45b806</color>
+    <color name="common_green_progress_clip">#97d774</color>
+    <!-- For suggestions (#b) -->
+    <color name="common_blue">#4389c5</color>
+    <color name="common_blue_bkg_pressed">#804389c5</color>
+    <color name="common_blue_bkg_disabled">#4c4389c5</color>
+
+    <color name="common_light_blue">#d3e5ee</color>
+
+    <color name="common_half_transparent">#b0000000</color>
+    <color name="common_70_percent_transparent">#b2000000</color>
+    <color name="common_20_percent_transparent">#33000000</color>
+    <color name="common_80_percent_transparent">#cc000000</color>
+
+    <color name="common_screen_bkg_color">#f3f8ff</color>
+    <color name="common_screen_bkg_cache_color">#00000000</color>
+    <color name="common_titlebar_bkg_color">#1b6fae</color>
+    <color name="common_titlebar_bkg_pressed_color">#20000000</color>
+    <color name="common_divider_color">#cfdfe9</color>
+    <color name="common_page_viewer_margin_color">@color/common_divider_color</color>
+    <color name="common_list_header_bkg_color">#fafaff</color>
+    <color name="common_list_item_bkg_pressed_color">#dfeef7</color>
+    <color name="common_bottombtn_bkg_pressed_color">#dcebf4</color>
+    <color name="common_bottombtn_bkg_pressed_color_alpha_90">#e5dcebf4</color>
+    <color name="common_dialog_bkg_color">@color/common_white</color>
+    <color name="common_loading_text_color">#4389c5</color>
+
+    <color name="common_tab_indicator_text_selected">@color/common_blue</color>
+    <color name="common_tab_indicator_text_unselected">@color/common_grey</color>
+
+</resources>

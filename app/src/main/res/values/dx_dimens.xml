@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android OS dimensions -->
+    <dimen name="common_app_icon_size">48dp</dimen>
+    <dimen name="common_status_bar_height">25dp</dimen>
+
+    <!-- For buttons -->
+    <dimen name="common_text_size_large">18dp</dimen>
+    <dimen name="common_text_size_large_2">20dp</dimen>
+    <!-- For list texts (top line) -->
+    <dimen name="common_text_size_middle">16dp</dimen>
+    <dimen name="common_text_size_middle_2">14dp</dimen>
+    <dimen name="common_text_size_middle_3">17dp</dimen>
+    <!-- For list texts (bottom line), summary texts, icon texts, descriptions, tag texts -->
+    <dimen name="common_text_size_small">13dp</dimen>
+    <dimen name="common_text_size_small_2">12dp</dimen>
+    <dimen name="common_text_size_small_3">10dp</dimen>
+
+    <dimen name="common_titlebar_height">47dp</dimen>
+    <dimen name="common_titlebar_action_width">60dp</dimen>
+    <dimen name="common_titlebar_corner_radius">6dp</dimen>
+    <dimen name="common_tab_height">42dp</dimen>
+    <dimen name="common_tab_indicator_height">3dp</dimen>
+    <dimen name="common_roundbtn_corner_radius">20dp</dimen>
+    <dimen name="common_select_switch_corner_radius">15dp</dimen>
+    <dimen name="common_tips_roundbtn_corner_radius">12dp</dimen>
+
+    <dimen name="common_bottombtn_corner_radius">5dp</dimen>
+    <!-- fix bottom corners bug in Android before 3.2.4 -->
+    <dimen name="common_bottombtn_bottom_radius_has">0dp</dimen>
+    <dimen name="common_bottombtn_bottom_radius_none">@dimen/common_bottombtn_corner_radius</dimen>
+    <dimen name="common_select_switch_radius_has">0dp</dimen>
+    <dimen name="common_select_switch_radius_none">@dimen/common_select_switch_corner_radius</dimen>
+
+    <dimen name="common_page_bottom_button_height">48dp</dimen>
+    <dimen name="common_page_left_margin">12dp</dimen>
+    <dimen name="common_page_bottom_one_button_margin">50dp</dimen>
+    <dimen name="common_page_shadow_height">6dp</dimen>
+    <dimen name="common_page_header_height">140dp</dimen>
+    <dimen name="common_page_margin_width">12dp</dimen>
+
+    <dimen name="common_divider_line_size">1px</dimen>
+    <dimen name="common_divider_horizontal_margin">12dp</dimen>
+
+    <dimen name="common_list_header_height">32dp</dimen>
+    <dimen name="common_list_header_padding_left">@dimen/common_page_left_margin</dimen>
+    <dimen name="common_list_item_height">60dp</dimen>
+    <dimen name="common_list_item_three_line_height">72dp</dimen>
+    <dimen name="common_list_item_left_padding">@dimen/common_page_left_margin</dimen>
+    <dimen name="common_list_item_right_padding">@dimen/common_list_item_left_padding</dimen>
+    <dimen name="common_list_item_app_icon_size">48dp</dimen>
+    <dimen name="common_list_item_app_icon_right_margin">6dp</dimen>
+    <dimen name="common_list_item_app_icon_left_margin">@dimen/common_list_item_left_padding</dimen>
+    <dimen name="common_list_item_two_line_first_top_margin">8dp</dimen>
+    <dimen name="common_list_item_two_line_second_top_margin">2dp</dimen>
+    <dimen name="common_list_item_text_left_margin">@dimen/common_page_left_margin</dimen>
+    <dimen name="common_list_sperator_height">@dimen/common_divider_line_size</dimen>
+    <dimen name="common_list_action_panel_left_margin">6dp</dimen>
+    <dimen name="common_action_button_height">@dimen/common_list_item_height</dimen>
+    <dimen name="common_action_button_width">@dimen/common_action_button_height</dimen>
+
+    <dimen name="common_list_card_padding_left">24dp</dimen>
+    <dimen name="common_list_card_margin_horizontal">12dp</dimen>
+    <dimen name="common_list_card_margin_vertical">12dp</dimen>
+
+    <dimen name="common_dialog_titlebar_height">44dp</dimen>
+    <dimen name="common_dialog_width">300dp</dimen>
+    <dimen name="common_dialog_margin_top">48dp</dimen>
+    <dimen name="common_dialog_margin_bottom">48dp</dimen>
+    <dimen name="common_dialog_content_margin_vertical">12dp</dimen>
+    <dimen name="common_dialog_content_margin_horizontal">18dp</dimen>
+    <dimen name="common_dialog_corner_radius">@dimen/common_bottombtn_corner_radius</dimen>
+    <dimen name="common_dialog_button_height">@dimen/common_page_bottom_button_height</dimen>
+    <dimen name="common_dialog_list_item_height">48dp</dimen>
+
+    <dimen name="common_expandable_list_padding_left">40dp</dimen>
+    <dimen name="common_expandable_list_group_indicator_left">10dp</dimen>
+
+    <dimen name="common_checkbox_size">24dp</dimen>
+    <dimen name="common_checkbox_padding">32dp</dimen>
+    <dimen name="common_checkbox_small_padding">26dp</dimen>
+
+    <dimen name="common_module_page_margin_left">6dp</dimen>
+    <dimen name="common_module_page_margin_right">6dp</dimen>
+    <dimen name="common_module_page_margin_bottom">8dp</dimen>
+    <dimen name="common_page_header_animator_height">220dp</dimen>
+
+    <dimen name="common_tips_dot_size">12dp</dimen>
+    <dimen name="common_tips_dot_radius">6dp</dimen>
+    <dimen name="common_tips_dot_edge_size">2px</dimen>
+    <dimen name="common_tips_text_height">18dp</dimen>
+    <dimen name="common_tips_text_radius">9dp</dimen>
+    <dimen name="common_tips_text_edge_size">2px</dimen>
+
+    <dimen name="common_notification_left_icon_size">64dp</dimen>
+    <dimen name="common_notification_margin_horizontal">8dp</dimen>
+
+</resources>

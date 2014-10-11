@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="online_config" translatable="false">在线参数</string>
+    <string name="make_crash" translatable="false">程序崩溃</string>
+    <string name="kv_event" translatable="false">多属性(K-V)事件</string>
+    <string name="normal_event" translatable="false">普通事件</string>
+    <string name="event_begin" translatable="false">事件开始</string>
+    <string name="event_end" translatable="false">事件结束</string>
+    <string name="event_duration" translatable="false">数值型统计</string>
+    <string name="page_stack" translatable="false">统计 Fragment 页面(Stack)</string>
+    <string name="page_tabs" translatable="false"> 统计 Fragment 页面( Tab )</string>
+    <string name="social_analytics" translatable="false">社交统计</string>
+    <string name="js_in_webview" translatable="false">Webview 统计</string>
+    <string name="flush_cache" translatable="false">手动发送数据</string>
+    <string name="app_name" translatable="false">主公莫慌攻略</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">关于</string>
+    <string name="action_feedback" translatable="false">反馈</string>
+    <string name="action_get_token" translatable="false">获取token</string>
+    <string name="action_weblist" translatable="false">网页版</string>
+    <string name="action_applist" translatable="false">APP版</string>
+    <string name="title_activity_about" translatable="false">关于</string>
+    <string name="title_activity_news_list">攻略列表</string>
+    <string name="title_activity_web_list">WebListActivity</string>
+    <string name="hello">Hello World, XListViewActivity!</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">更新：</string>
+    <string name="xlistview_footer_hint_normal">上滑查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_release_to_refresh">Release to refresh</string>
+    <string name="ptr_refreshing">Refreshing</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="push_service_switch">接受推送消息</string>
+    <string name="pop_up_monitor">游戏退出时提醒攻略</string>
+
+    <string name="noti_title">看看主公莫慌怎么玩</string>
+    <string name="noti_message">精彩攻略尽在其中</string>
+
+</resources>

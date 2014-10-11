@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity" >
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_feedback"
+        android:title="@string/action_feedback"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_get_token"
+        android:title="@string/action_get_token"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_weblist"
+        android:title="@string/action_weblist"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_applist"
+        android:title="@string/action_applist"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

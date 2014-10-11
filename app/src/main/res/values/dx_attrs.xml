@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="title" format="string" />
+
+    <declare-styleable name="DxTitleIndicator">
+        <attr name="titlePadding" format="dimension" />
+        <!-- Left/right padding of not active view titles. -->
+        <attr name="clipPadding" format="dimension" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSizeNormal" format="dimension" />
+        <attr name="textSizeSelected" format="dimension" />
+        <attr name="footerLineHeight" format="dimension" />
+        <attr name="footerColor" format="color" />
+        <attr name="footerTriangleHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DxToggleButton">
+        <attr name="textOn" format="string" />
+        <attr name="textOff" format="string" />
+        <attr name="disabledAlpha" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="DxPreference">
+        <attr name="layout" format="reference" />
+        <attr name="name" format="string" />
+        <attr name="title" />
+        <attr name="summary" format="string" />
+        <attr name="enabled" format="boolean" />
+        <attr name="type" format="string" />
+        <attr name="newTipShow" format="boolean" />
+        <attr name="iconSrc" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DxPickSelectView">
+        <attr name="title" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DxEmptyView">
+        <attr name="image" format="reference" />
+        <attr name="tips" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DxPageBottomButton">
+        <attr name="text" format="string" />
+        <attr name="showCheckbox" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DxPageTips">
+        <attr name="message" format="string" />
+        <attr name="hasButton" format="boolean" />
+        <attr name="isImageButton" format="boolean" />
+        <attr name="imageSrc" format="reference" />
+        <attr name="buttonText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DxPointProgress">
+        <attr name="count" format="integer" />
+        <attr name="time" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DxMovementView">
+        <attr name="image_src" format="reference" />
+        <attr name="moveable" format="boolean" />
+        <attr name="direction" format="string" />
+        <attr name="interval_x" format="integer" />
+        <attr name="interval_y" format="integer" />
+    </declare-styleable>
+
+</resources>
