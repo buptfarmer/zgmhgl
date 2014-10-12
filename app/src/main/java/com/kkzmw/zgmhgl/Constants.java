@@ -10,6 +10,7 @@ public class Constants {
     public static final String APP_PATH = Environment.getExternalStorageDirectory().getPath()
             + "/ccc/";
 
+    public static final String APP_KEY_TESTIN = "87edf62fed8f8b858d06e25c7c34ac75";
     public static final String APP_KEY = "shGlzkqUjJVAgmJb";
     public static final String APP_ID = "1103286881";
     public static final String AD1_ID = "7090204083842192";

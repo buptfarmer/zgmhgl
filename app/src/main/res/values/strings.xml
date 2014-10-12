@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
 
     <string name="online_config" translatable="false">在线参数</string>
     <string name="make_crash" translatable="false">程序崩溃</string>
@@ -21,7 +23,7 @@
     <string name="action_weblist" translatable="false">网页版</string>
     <string name="action_applist" translatable="false">APP版</string>
     <string name="title_activity_about" translatable="false">关于</string>
-    <string name="title_activity_news_list">攻略列表</string>
+    <string name="title_activity_news_list" >攻略列表</string>
     <string name="title_activity_web_list">WebListActivity</string>
     <string name="hello">Hello World, XListViewActivity!</string>
     <string name="xlistview_header_hint_normal">下拉刷新</string>

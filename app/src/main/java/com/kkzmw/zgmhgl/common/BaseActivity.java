@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 
 import com.kkzmw.zgmhgl.Constants;
 import com.kkzmw.zgmhgl.R;
+import com.testin.agent.TestinAgent;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener;
 import com.umeng.fb.FeedbackAgent;
@@ -28,7 +29,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+//        TestinAgent.init(this, Constants.APP_KEY_TESTIN);
         mAdContent = (RelativeLayout) findViewById(R.id.adcontent);
 
         // for update
@@ -79,8 +80,21 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("ccc", "onResume: " + CommonUtils.getDeviceInfo(this));
+        String deviceInfo = CommonUtils.getDeviceInfo(this);
+        TestinAgent.setUserInfo(deviceInfo);
+        if (DEBUG) {
+            Log.d("ccc", "onResume: " + deviceInfo);
+        }
+        TestinAgent.onResume(this);//此行必须放在super.onResume后
+
         MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        TestinAgent.onStop(this);//此行必须放在super.onStop后
+
     }
 
     @Override

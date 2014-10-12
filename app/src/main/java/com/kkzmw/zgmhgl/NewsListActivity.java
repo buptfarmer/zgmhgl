@@ -98,9 +98,12 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
         mXListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                NewsItem clickedItem = mDatas.get(i);
-                Intent intent = new Intent(NewsListActivity.this,DetailActivity.class);
-                intent.putExtra(Constants.EXTRA_KEY_URL,clickedItem.getLink());
+                if(DEBUG){
+                    Log.d(TAG,"onclick: position:"+ i);
+                }
+                NewsItem clickedItem = (NewsItem) mAdapter.getItem(i - 1);
+                Intent intent = new Intent(NewsListActivity.this, DetailActivity.class);
+                intent.putExtra(Constants.EXTRA_KEY_URL, clickedItem.getLink());
                 startActivity(intent);
             }
         });
@@ -117,7 +120,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG,"onResume: isFirstIn:"+isFirstIn);
+        Log.d(TAG, "onResume: isFirstIn:" + isFirstIn);
         if (isFirstIn) {
             /**
              * 进来时直接刷新
@@ -262,11 +265,11 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
 //                String createTime = item.getString("CreatedTime");
                 String breifContent = item.getString("ContentShortcut");
                 int id = item.getInt("Id");
-                long publicTime = item.getLong("PublicTime");
+                long publicTime = item.getLong("PublicTime") * 1000;
 
                 if (DEBUG) {
                     Log.d(TAG, "json: title:" + title + "  imgLink:" + imgLink + "  publicTime:" + publicTime + "  breifContent:" + breifContent);
-                    Log.d(TAG, "publicTime"+new SimpleDateFormat("yyyy-MM-dd").format(new Date(publicTime))  +" ,currentTime"+System.currentTimeMillis());
+                    Log.d(TAG, "publicTime" + new SimpleDateFormat("yyyy-MM-dd").format(new Date(publicTime)) + " ,currentTime" + System.currentTimeMillis());
 
                 }
                 newsItem = new NewsItem();
@@ -276,7 +279,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
                 newsItem.setId(id);
                 newsItem.setPublicTime(publicTime);
 
-                newsItem.setLink(URLUtil.generateDetailUrl(this,type,id));
+                newsItem.setLink(URLUtil.generateDetailUrl(this, type, id));
                 newsItem.setNewsType(type);
                 newsItems.add(newsItem);
             }
@@ -368,7 +371,7 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
 
                 holder.mContent = (TextView) convertView.findViewById(R.id.id_content);
                 holder.mTitle = (TextView) convertView.findViewById(R.id.id_title);
-                holder.mDate = (TextView) convertView.findViewById(R.id.id_date);
+//                holder.mDate = (TextView) convertView.findViewById(R.id.id_date);
                 holder.mImg = (ImageView) convertView.findViewById(R.id.id_newsImg);
 
                 convertView.setTag(holder);
@@ -377,8 +380,8 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             }
             NewsItem newsItem = mDatas.get(position);
             holder.mTitle.setText(newsItem.getTitle());
-            holder.mContent.setText(newsItem.getBriefContent());
-            holder.mDate.setText(newsItem.getDate());
+            holder.mContent.setText("[" + newsItem.getDate() + "] " + newsItem.getBriefContent());
+//            holder.mDate.setText(newsItem.getDate());
             if (newsItem.getImgLink() != null) {
                 holder.mImg.setVisibility(View.VISIBLE);
                 imageLoader.displayImage(newsItem.getImgLink(), holder.mImg, options);

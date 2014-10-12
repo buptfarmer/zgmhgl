@@ -14,7 +14,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -134,6 +133,10 @@
             android:name=".DetailActivity"
             android:label="@string/app_name" >
         </activity>
+
+        <meta-data android:name="TESTIN_APPKEY" android:value="87edf62fed8f8b858d06e25c7c34ac75"/>
+        <!-- 设置渠道信息 -->
+        <meta-data android:name="TESTIN_CHANNEL" android:value="1st_release"/>
     </application>
 
 </manifest>
