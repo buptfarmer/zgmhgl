@@ -332,8 +332,8 @@ public class NewsListActivity extends BaseActivity implements IXListViewRefreshL
             mInflater = LayoutInflater.from(context);
 
             imageLoader.init(ImageLoaderConfiguration.createDefault(context));
-            options = new DisplayImageOptions.Builder().showStubImage(R.drawable.icon)
-                    .showImageForEmptyUri(R.drawable.icon).showImageOnFail(R.drawable.icon).cacheInMemory()
+            options = new DisplayImageOptions.Builder().showStubImage(R.drawable.zg_banner_small)
+                    .showImageForEmptyUri(R.drawable.zg_banner_small).showImageOnFail(R.drawable.zg_banner_small).cacheInMemory()
                     .cacheOnDisc().displayer(new RoundedBitmapDisplayer(20)).displayer(new FadeInBitmapDisplayer(300))
                     .build();
         }
